@@ -14,6 +14,12 @@
 		53ABC2001EB854E700C04593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53ABC1FE1EB854E700C04593 /* LaunchScreen.storyboard */; };
 		53ABC20B1EB854E800C04593 /* ZhihuDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ABC20A1EB854E800C04593 /* ZhihuDailyTests.swift */; };
 		53ABC2161EB854E800C04593 /* ZhihuDailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ABC2151EB854E800C04593 /* ZhihuDailyUITests.swift */; };
+		53D2518D1ED5185200A7F6E9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D2518C1ED5185200A7F6E9 /* Model.swift */; };
+		53D2518F1ED51AD300A7F6E9 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D2518E1ED51AD300A7F6E9 /* News.swift */; };
+		53D251911ED51CF900A7F6E9 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D251901ED51CF900A7F6E9 /* Story.swift */; };
+		53D251931ED525BC00A7F6E9 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D251921ED525BC00A7F6E9 /* BannerView.swift */; };
+		53D251971ED52CB800A7F6E9 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D251951ED52CB800A7F6E9 /* StoryCell.swift */; };
+		53D251981ED52CB800A7F6E9 /* StoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53D251961ED52CB800A7F6E9 /* StoryCell.xib */; };
 		8C36757E7FC3F4B9DCE56043 /* Pods_ZhihuDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977B9B418B3ED73CB19CAAA4 /* Pods_ZhihuDaily.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +55,12 @@
 		53ABC2111EB854E800C04593 /* ZhihuDailyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhihuDailyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53ABC2151EB854E800C04593 /* ZhihuDailyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhihuDailyUITests.swift; sourceTree = "<group>"; };
 		53ABC2171EB854E800C04593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53D2518C1ED5185200A7F6E9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		53D2518E1ED51AD300A7F6E9 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		53D251901ED51CF900A7F6E9 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		53D251921ED525BC00A7F6E9 /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		53D251951ED52CB800A7F6E9 /* StoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
+		53D251961ED52CB800A7F6E9 /* StoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryCell.xib; sourceTree = "<group>"; };
 		977B9B418B3ED73CB19CAAA4 /* Pods_ZhihuDaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhihuDaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F1EB42D9B29CE011602A00 /* Pods-ZhihuDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhihuDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhihuDaily/Pods-ZhihuDaily.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +128,8 @@
 				53ABC1F51EB854E700C04593 /* AppDelegate.swift */,
 				53ABC1F71EB854E700C04593 /* ViewController.swift */,
 				53ABC1F91EB854E700C04593 /* Main.storyboard */,
+				53D251941ED525C400A7F6E9 /* view */,
+				53D251891ED517E900A7F6E9 /* model */,
 				53ABC1FC1EB854E700C04593 /* Assets.xcassets */,
 				53ABC1FE1EB854E700C04593 /* LaunchScreen.storyboard */,
 				53ABC2011EB854E700C04593 /* Info.plist */,
@@ -139,6 +153,26 @@
 				53ABC2171EB854E800C04593 /* Info.plist */,
 			);
 			path = ZhihuDailyUITests;
+			sourceTree = "<group>";
+		};
+		53D251891ED517E900A7F6E9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				53D2518C1ED5185200A7F6E9 /* Model.swift */,
+				53D2518E1ED51AD300A7F6E9 /* News.swift */,
+				53D251901ED51CF900A7F6E9 /* Story.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		53D251941ED525C400A7F6E9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				53D251921ED525BC00A7F6E9 /* BannerView.swift */,
+				53D251951ED52CB800A7F6E9 /* StoryCell.swift */,
+				53D251961ED52CB800A7F6E9 /* StoryCell.xib */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		60B56CB6CE172F994E94EC61 /* Frameworks */ = {
@@ -263,6 +297,7 @@
 				53ABC2001EB854E700C04593 /* LaunchScreen.storyboard in Resources */,
 				53ABC1FD1EB854E700C04593 /* Assets.xcassets in Resources */,
 				53ABC1FB1EB854E700C04593 /* Main.storyboard in Resources */,
+				53D251981ED52CB800A7F6E9 /* StoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,8 +370,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D2518D1ED5185200A7F6E9 /* Model.swift in Sources */,
 				53ABC1F81EB854E700C04593 /* ViewController.swift in Sources */,
+				53D251931ED525BC00A7F6E9 /* BannerView.swift in Sources */,
+				53D251971ED52CB800A7F6E9 /* StoryCell.swift in Sources */,
+				53D2518F1ED51AD300A7F6E9 /* News.swift in Sources */,
 				53ABC1F61EB854E700C04593 /* AppDelegate.swift in Sources */,
+				53D251911ED51CF900A7F6E9 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +627,7 @@
 				53ABC21C1EB854E800C04593 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53ABC21D1EB854E800C04593 /* Build configuration list for PBXNativeTarget "ZhihuDailyTests" */ = {
 			isa = XCConfigurationList;
@@ -595,6 +636,7 @@
 				53ABC21F1EB854E800C04593 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53ABC2201EB854E800C04593 /* Build configuration list for PBXNativeTarget "ZhihuDailyUITests" */ = {
 			isa = XCConfigurationList;
@@ -603,6 +645,7 @@
 				53ABC2221EB854E800C04593 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

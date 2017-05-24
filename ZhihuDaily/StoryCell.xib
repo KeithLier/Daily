@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCell" id="KGk-i7-Jjw" customClass="StoryCell" customModule="ZhihuDaily" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J9N-Yg-Vk5">
+                        <rect key="frame" x="10" y="5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="DJ3-qp-p49"/>
+                            <constraint firstAttribute="width" constant="50" id="cGD-9P-OTV"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mG7-L3-EaL">
+                        <rect key="frame" x="70" y="5" width="240" height="49.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mG7-L3-EaL" firstAttribute="leading" secondItem="J9N-Yg-Vk5" secondAttribute="trailing" constant="10" id="JkQ-fG-EDS"/>
+                    <constraint firstAttribute="trailing" secondItem="mG7-L3-EaL" secondAttribute="trailing" constant="10" id="Roe-Fz-PgK"/>
+                    <constraint firstItem="mG7-L3-EaL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="SR3-EK-kOC"/>
+                    <constraint firstItem="J9N-Yg-Vk5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="XKN-Kr-xsj"/>
+                    <constraint firstItem="J9N-Yg-Vk5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aCo-9E-zaE"/>
+                    <constraint firstAttribute="bottom" secondItem="mG7-L3-EaL" secondAttribute="bottom" constant="5" id="vm9-xu-e20"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="thumbNail" destination="J9N-Yg-Vk5" id="fu6-OZ-0b5"/>
+                <outlet property="titleLabel" destination="mG7-L3-EaL" id="Kle-QQ-rq1"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
