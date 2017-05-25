@@ -26,7 +26,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "ceshi"
+        self.title = "知乎日报"
         getNews(newsURL: News.latestNewsURL)
         let nib = UINib(nibName: "StoryCell", bundle: nil) //nibName指的是我们创建的Cell文件名
         tableView.register(nib, forCellReuseIdentifier: cellId)
@@ -49,8 +49,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60;
-    } 
+        return 100;
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellId, for: indexPath) as? StoryCell
         cell?.thumbNail.image = nil

@@ -5,7 +5,7 @@ use_frameworks!
 target 'ZhihuDaily' do
 
     pod 'Alamofire', '~> 4.4'
-    pod 'AlamofireImage', '~> 3.0'
+    pod 'AlamofireImage', '~> 3.1'
     pod 'AlamofireNetworkActivityIndicator', '~> 2.0'
 
 end

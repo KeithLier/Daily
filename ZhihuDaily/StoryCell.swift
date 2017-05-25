@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 @IBDesignable
 class StoryCell: UITableViewCell {
@@ -17,7 +18,7 @@ class StoryCell: UITableViewCell {
     var story: Story! {
         didSet {
             self.titleLabel.text = story.title;
-//            self.thumbNail.af_setImage(withURL: story.thumbnailURL)
+            self.thumbNail.af_setImage(withURL: story.thumbnailURL)
         }
     }
     

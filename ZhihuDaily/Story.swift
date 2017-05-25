@@ -18,7 +18,7 @@ struct Story {
     }
     
     var thumbnailURL: URL {
-        return URL(string: thumbnail.replacingOccurrences(of: "http", with: "https"))!
+        return URL(string: thumbnail)!
     }
     
     init(id: Int, title: String, thumbnail: String) {
