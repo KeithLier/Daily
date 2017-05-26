@@ -17,7 +17,7 @@ class BannerView: UIView {
     
     var currentPage: Int {
         var currentPage: Int
-        let realPage = Int(collectionView.contentOffset.x / UIScreen.main.bounds.width + 0.5)
+        let realPage = Int(collectionView.contentOffset.x / UIScreen.main.bounds.width)
         if realPage == 6 {
             currentPage = 0
         } else if realPage == 0 {
@@ -57,6 +57,12 @@ class BannerView: UIView {
         
         setupCollectionView()
         setupPageControl()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: UIScreen.main.bounds.width, height: frame.height)
     }
 }
 
@@ -124,7 +130,8 @@ extension BannerView: UICollectionViewDelegate, UICollectionViewDataSource {
             contentView.configureModel(model: models[index])
             cell.contentView.addSubview(contentView)
         }
-        
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = UIColor.red.cgColor
         return cell
     }
     
@@ -132,19 +139,19 @@ extension BannerView: UICollectionViewDelegate, UICollectionViewDataSource {
         delegate?.tapBanner(model: models[currentPage])
     }
     
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-        let screenWidth = UIScreen.main.bounds.width
-        switch collectionView.contentOffset.x {
-        case 0:
-            collectionView.contentOffset.x = 5 * screenWidth
-            
-        case 6 * screenWidth:
-            collectionView.contentOffset.x = 1 * screenWidth
-            
-        default: break
-        }
-    }
+//    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        
+//        let screenWidth = UIScreen.main.bounds.width
+//        switch collectionView.contentOffset.x {
+//        case 0:
+//            collectionView.contentOffset.x = 5 * screenWidth
+//            
+//        case 6 * screenWidth:
+//            collectionView.contentOffset.x = 1 * screenWidth
+//            
+//        default: break
+//        }
+//    }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
     }

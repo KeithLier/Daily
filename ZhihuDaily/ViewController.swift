@@ -39,8 +39,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
     }
     
-    var didSelectStory: (Story) -> () = { _ in}
-    
 }
 
 extension ViewController {
@@ -78,6 +76,13 @@ extension ViewController {
         let nib = UINib(nibName: "StoryCell", bundle: nil) //nibName指的是我们创建的Cell文件名
         tableView.register(nib, forCellReuseIdentifier: cellId)
         tableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "header")
+        
+        tableView.rowHeight = 101
+        tableView.estimatedRowHeight = 101
+        tableView.contentInset.top = -64
+        tableView.scrollIndicatorInsets.top = tableView.contentInset.top
+        tableView.clipsToBounds = false
+        tableView.backgroundColor = Theme.white
     }
     
     fileprivate func setupBannerView() {
@@ -150,8 +155,12 @@ extension ViewController {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header")
+        
         header?.textLabel?.text = news[section].beautifulDate
+        header?.textLabel?.textColor = Theme.white
         header?.textLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        
+        header?.layer.backgroundColor = Theme.mainColor.cgColor
         return header
     }
     
@@ -164,8 +173,10 @@ extension ViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let cell = tableView.cellForRow(at: indexPath) as! StoryCell
-        didSelectStory(cell.story)
+        
+        gotoDetail(story: cell.story)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -207,6 +218,13 @@ extension ViewController {
             return story as BannerDataSource
         })
     }
+    
+    func gotoDetail(story: Story) {
+        let detail = DetailViewController()
+        detail.story = story
+        navigationController?.pushViewController(detail, animated: true)
+
+    }
 }
 
 extension ViewController: BannerDelegate {
@@ -215,6 +233,7 @@ extension ViewController: BannerDelegate {
         guard let story = model as? Story else {
             fatalError()
         }
-        didSelectStory(story)
+        
+        gotoDetail(story: story)
     }
 }

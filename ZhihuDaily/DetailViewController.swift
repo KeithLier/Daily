@@ -10,6 +10,14 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    
+    var story: Story! {
+        didSet {
+            self.navigationItem.title = story?.title
+//            requestContent()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
