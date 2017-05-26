@@ -56,6 +56,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="G4U-oW-aPA"/>
                     <connections>
+                        <outlet property="bannerView" destination="FGK-vR-yRX" id="SBj-V2-6vL"/>
                         <outlet property="tableView" destination="15B-yW-mmg" id="VZ6-D6-71z"/>
                     </connections>
                 </viewController>

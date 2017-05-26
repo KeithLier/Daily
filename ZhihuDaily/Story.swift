@@ -28,6 +28,21 @@ struct Story {
     }
 }
 
+extension Story: BannerDataSource {
+    
+    var bannerTitle: String {
+        return title
+    }
+    
+    var bannerImageURL: URL? {
+        return URL(string: thumbnail)
+    }
+    
+    var bannerImage: UIImage? {
+        return nil
+    }
+}
+
 extension Story: JSONParsable {
     static func parse(json: JSONDictionary) throws -> Story {
         

@@ -11,7 +11,7 @@ import Foundation
 struct News {
     var dateString : String
     var stories : [Story]
-    var topStorise : [Story]?
+    var topStories : [Story]?
     
     var beautifulDate : String {
         let str = dateString as NSString
@@ -24,7 +24,7 @@ struct News {
     init(dateString: String, stories: [Story], topStories: [Story]?) {
         self.dateString = dateString
         self.stories = stories
-        self.topStorise = topStories
+        self.topStories = topStories
     }
 }
 

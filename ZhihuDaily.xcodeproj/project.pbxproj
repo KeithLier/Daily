@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5310565C1ED7B6FB002B53DC /* BannerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5310565B1ED7B6FB002B53DC /* BannerContentView.swift */; };
+		5310565E1ED7C2D7002B53DC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5310565D1ED7C2D7002B53DC /* Theme.swift */; };
+		531056601ED7C4F4002B53DC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5310565F1ED7C4F4002B53DC /* Extension.swift */; };
 		53452BBB1ED67BD900C05002 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53452BB91ED67BD900C05002 /* DetailViewController.swift */; };
 		53452BBC1ED67BD900C05002 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53452BBA1ED67BD900C05002 /* DetailViewController.xib */; };
 		53ABC1F61EB854E700C04593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ABC1F51EB854E700C04593 /* AppDelegate.swift */; };
@@ -44,6 +47,9 @@
 
 /* Begin PBXFileReference section */
 		14CE7AE2D9E8192D2684F31C /* Pods-ZhihuDaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhihuDaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhihuDaily/Pods-ZhihuDaily.release.xcconfig"; sourceTree = "<group>"; };
+		5310565B1ED7B6FB002B53DC /* BannerContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerContentView.swift; sourceTree = "<group>"; };
+		5310565D1ED7C2D7002B53DC /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		5310565F1ED7C4F4002B53DC /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		53452BB91ED67BD900C05002 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		53452BBA1ED67BD900C05002 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		53ABC1F21EB854E700C04593 /* ZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +173,8 @@
 				53D2518C1ED5185200A7F6E9 /* Model.swift */,
 				53D2518E1ED51AD300A7F6E9 /* News.swift */,
 				53D251901ED51CF900A7F6E9 /* Story.swift */,
+				5310565D1ED7C2D7002B53DC /* Theme.swift */,
+				5310565F1ED7C4F4002B53DC /* Extension.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				53D251921ED525BC00A7F6E9 /* BannerView.swift */,
+				5310565B1ED7B6FB002B53DC /* BannerContentView.swift */,
 				53D251951ED52CB800A7F6E9 /* StoryCell.swift */,
 				53D251961ED52CB800A7F6E9 /* StoryCell.xib */,
 			);
@@ -381,10 +390,13 @@
 				53ABC1F81EB854E700C04593 /* ViewController.swift in Sources */,
 				53D251931ED525BC00A7F6E9 /* BannerView.swift in Sources */,
 				53D251971ED52CB800A7F6E9 /* StoryCell.swift in Sources */,
+				531056601ED7C4F4002B53DC /* Extension.swift in Sources */,
 				53D2518F1ED51AD300A7F6E9 /* News.swift in Sources */,
 				53ABC1F61EB854E700C04593 /* AppDelegate.swift in Sources */,
 				53D251911ED51CF900A7F6E9 /* Story.swift in Sources */,
+				5310565E1ED7C2D7002B53DC /* Theme.swift in Sources */,
 				53452BBB1ED67BD900C05002 /* DetailViewController.swift in Sources */,
+				5310565C1ED7B6FB002B53DC /* BannerContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
